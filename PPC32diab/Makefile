@@ -31,7 +31,7 @@ else
 MODE_DIR := NonDebug
 endif
 OBJ_DIR := .
-PRJ_ROOT_DIR := D:/workspace/simmb-testbench
+PRJ_ROOT_DIR := D:/GitHub/simmb-testbench
 WS_ROOT_DIR := D:/workspace
 
 
@@ -113,46 +113,51 @@ simmb-testbench/$(MODE_DIR)/% : LIBPATH =
 simmb-testbench/$(MODE_DIR)/% : LIBS = 
 simmb-testbench/$(MODE_DIR)/% : OBJ_DIR := simmb-testbench/$(MODE_DIR)
 
-simmb-testbench/$(MODE_DIR)/Objects/simmb-testbench/src/BTM.o : D:/workspace/simmb-testbench/src/BTM.c
+simmb-testbench/$(MODE_DIR)/Objects/sim/src/BTM.o : D:/GitHub/simmb-testbench/src/BTM.c
 	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)dcc $(DEBUGFLAGS_C-Compiler) $(CC_ARCH_SPEC) -W:c:,-Xclib-optim-off -Xansi -Xlocal-data-area-static-only  -Xforce-declarations   -Xmake-dependency=0xd -Xcode-absolute-far $(ADDED_CFLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
 
 
-simmb-testbench/$(MODE_DIR)/Objects/simmb-testbench/src/doppler.o : D:/workspace/simmb-testbench/src/doppler.c
+simmb-testbench/$(MODE_DIR)/Objects/sim/src/ai.o : D:/GitHub/simmb-testbench/src/ai.c
 	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)dcc $(DEBUGFLAGS_C-Compiler) $(CC_ARCH_SPEC) -W:c:,-Xclib-optim-off -Xansi -Xlocal-data-area-static-only  -Xforce-declarations   -Xmake-dependency=0xd -Xcode-absolute-far $(ADDED_CFLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
 
 
-simmb-testbench/$(MODE_DIR)/Objects/simmb-testbench/src/fpga.o : D:/workspace/simmb-testbench/src/fpga.c
+simmb-testbench/$(MODE_DIR)/Objects/sim/src/doppler.o : D:/GitHub/simmb-testbench/src/doppler.c
 	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)dcc $(DEBUGFLAGS_C-Compiler) $(CC_ARCH_SPEC) -W:c:,-Xclib-optim-off -Xansi -Xlocal-data-area-static-only  -Xforce-declarations   -Xmake-dependency=0xd -Xcode-absolute-far $(ADDED_CFLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
 
 
-simmb-testbench/$(MODE_DIR)/Objects/simmb-testbench/src/lib.o : D:/workspace/simmb-testbench/src/lib.c
+simmb-testbench/$(MODE_DIR)/Objects/sim/src/fpga.o : D:/GitHub/simmb-testbench/src/fpga.c
 	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)dcc $(DEBUGFLAGS_C-Compiler) $(CC_ARCH_SPEC) -W:c:,-Xclib-optim-off -Xansi -Xlocal-data-area-static-only  -Xforce-declarations   -Xmake-dependency=0xd -Xcode-absolute-far $(ADDED_CFLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
 
 
-simmb-testbench/$(MODE_DIR)/Objects/simmb-testbench/src/sim.o : D:/workspace/simmb-testbench/src/sim.c
+simmb-testbench/$(MODE_DIR)/Objects/sim/src/lib.o : D:/GitHub/simmb-testbench/src/lib.c
 	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)dcc $(DEBUGFLAGS_C-Compiler) $(CC_ARCH_SPEC) -W:c:,-Xclib-optim-off -Xansi -Xlocal-data-area-static-only  -Xforce-declarations   -Xmake-dependency=0xd -Xcode-absolute-far $(ADDED_CFLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
 
 
-simmb-testbench/$(MODE_DIR)/Objects/simmb-testbench/src/speed.o : D:/workspace/simmb-testbench/src/speed.c
+simmb-testbench/$(MODE_DIR)/Objects/sim/src/sim.o : D:/GitHub/simmb-testbench/src/sim.c
 	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)dcc $(DEBUGFLAGS_C-Compiler) $(CC_ARCH_SPEC) -W:c:,-Xclib-optim-off -Xansi -Xlocal-data-area-static-only  -Xforce-declarations   -Xmake-dependency=0xd -Xcode-absolute-far $(ADDED_CFLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
 
 
-simmb-testbench/$(MODE_DIR)/Objects/simmb-testbench/src/tms.o : D:/workspace/simmb-testbench/src/tms.c
+simmb-testbench/$(MODE_DIR)/Objects/sim/src/speed.o : D:/GitHub/simmb-testbench/src/speed.c
 	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)dcc $(DEBUGFLAGS_C-Compiler) $(CC_ARCH_SPEC) -W:c:,-Xclib-optim-off -Xansi -Xlocal-data-area-static-only  -Xforce-declarations   -Xmake-dependency=0xd -Xcode-absolute-far $(ADDED_CFLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
 
 
-simmb-testbench/$(MODE_DIR)/Objects/simmb-testbench/src/udp.o : D:/workspace/simmb-testbench/src/udp.c
+simmb-testbench/$(MODE_DIR)/Objects/sim/src/tms.o : D:/GitHub/simmb-testbench/src/tms.c
 	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)dcc $(DEBUGFLAGS_C-Compiler) $(CC_ARCH_SPEC) -W:c:,-Xclib-optim-off -Xansi -Xlocal-data-area-static-only  -Xforce-declarations   -Xmake-dependency=0xd -Xcode-absolute-far $(ADDED_CFLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
 
 
-OBJECTS_simmb-testbench = simmb-testbench/$(MODE_DIR)/Objects/simmb-testbench/src/BTM.o \
-	 simmb-testbench/$(MODE_DIR)/Objects/simmb-testbench/src/doppler.o \
-	 simmb-testbench/$(MODE_DIR)/Objects/simmb-testbench/src/fpga.o \
-	 simmb-testbench/$(MODE_DIR)/Objects/simmb-testbench/src/lib.o \
-	 simmb-testbench/$(MODE_DIR)/Objects/simmb-testbench/src/sim.o \
-	 simmb-testbench/$(MODE_DIR)/Objects/simmb-testbench/src/speed.o \
-	 simmb-testbench/$(MODE_DIR)/Objects/simmb-testbench/src/tms.o \
-	 simmb-testbench/$(MODE_DIR)/Objects/simmb-testbench/src/udp.o
+simmb-testbench/$(MODE_DIR)/Objects/sim/src/udp.o : D:/GitHub/simmb-testbench/src/udp.c
+	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)dcc $(DEBUGFLAGS_C-Compiler) $(CC_ARCH_SPEC) -W:c:,-Xclib-optim-off -Xansi -Xlocal-data-area-static-only  -Xforce-declarations   -Xmake-dependency=0xd -Xcode-absolute-far $(ADDED_CFLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
+
+
+OBJECTS_simmb-testbench = simmb-testbench/$(MODE_DIR)/Objects/sim/src/BTM.o \
+	 simmb-testbench/$(MODE_DIR)/Objects/sim/src/ai.o \
+	 simmb-testbench/$(MODE_DIR)/Objects/sim/src/doppler.o \
+	 simmb-testbench/$(MODE_DIR)/Objects/sim/src/fpga.o \
+	 simmb-testbench/$(MODE_DIR)/Objects/sim/src/lib.o \
+	 simmb-testbench/$(MODE_DIR)/Objects/sim/src/sim.o \
+	 simmb-testbench/$(MODE_DIR)/Objects/sim/src/speed.o \
+	 simmb-testbench/$(MODE_DIR)/Objects/sim/src/tms.o \
+	 simmb-testbench/$(MODE_DIR)/Objects/sim/src/udp.o
 
 simmb-testbench/$(MODE_DIR)/simmb-testbench.out : $(OBJECTS_simmb-testbench)
 	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@";rm -f "$@";ddump -Ng $(OBJECTS_simmb-testbench) $(IDE_LIBRARIES) | tclsh $(WIND_BASE)/host/resource/hutils/tcl/munch.tcl -c ppc > $(OBJ_DIR)/ctdt.c; $(TOOL_PATH)dcc $(DEBUGFLAGS_Linker) $(CC_ARCH_SPEC) -Xdollar-in-ident -Xforce-declarations  $(ADDED_CFLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES)  -o $(OBJ_DIR)/ctdt.o -c $(OBJ_DIR)/ctdt.c; $(TOOL_PATH)dld -tPPCFH:vxworks66 -X -r5 -r4 -o "$@" $(OBJ_DIR)/ctdt.o $(OBJECTS_simmb-testbench) $(IDE_LIBRARIES) $(LIBPATH) $(LIBS) $(ADDED_LIBPATH) $(ADDED_LIBS) && if [ "$(EXPAND_DBG)" = "1" ]; then plink "$@";fi
@@ -164,9 +169,9 @@ _clean :: simmb-testbench/$(MODE_DIR)/simmb-testbench_clean
 simmb-testbench/$(MODE_DIR)/simmb-testbench_clean : 
 	$(TRACE_FLAG)if [ -d "simmb-testbench" ]; then cd "simmb-testbench"; rm -rf $(MODE_DIR); fi
 
-DEP_FILES := simmb-testbench/$(MODE_DIR)/Objects/simmb-testbench/src/BTM.d simmb-testbench/$(MODE_DIR)/Objects/simmb-testbench/src/doppler.d simmb-testbench/$(MODE_DIR)/Objects/simmb-testbench/src/fpga.d \
-	 simmb-testbench/$(MODE_DIR)/Objects/simmb-testbench/src/lib.d simmb-testbench/$(MODE_DIR)/Objects/simmb-testbench/src/sim.d simmb-testbench/$(MODE_DIR)/Objects/simmb-testbench/src/speed.d \
-	 simmb-testbench/$(MODE_DIR)/Objects/simmb-testbench/src/tms.d simmb-testbench/$(MODE_DIR)/Objects/simmb-testbench/src/udp.d
+DEP_FILES := simmb-testbench/$(MODE_DIR)/Objects/sim/src/BTM.d simmb-testbench/$(MODE_DIR)/Objects/sim/src/ai.d simmb-testbench/$(MODE_DIR)/Objects/sim/src/doppler.d \
+	 simmb-testbench/$(MODE_DIR)/Objects/sim/src/fpga.d simmb-testbench/$(MODE_DIR)/Objects/sim/src/lib.d simmb-testbench/$(MODE_DIR)/Objects/sim/src/sim.d \
+	 simmb-testbench/$(MODE_DIR)/Objects/sim/src/speed.d simmb-testbench/$(MODE_DIR)/Objects/sim/src/tms.d simmb-testbench/$(MODE_DIR)/Objects/sim/src/udp.d
 -include $(DEP_FILES)
 
 

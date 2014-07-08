@@ -1295,7 +1295,7 @@
     <buildtargets>
         <buildtarget buildtool="Linker" name="simmb-testbench" passed="false" targetname="simmb-testbench">
             <contents>
-                <folder name="/simmb-testbench" recursive="true"/>
+                <folder name="/sim" recursive="true"/>
             </contents>
         </buildtarget>
     </buildtargets>

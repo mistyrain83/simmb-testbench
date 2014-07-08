@@ -12,5 +12,6 @@ void tb_tms_rs485(void);
 void tb_doppler_rs485(void);
 void tb_doppler_pwm(void);
 void tb_net(void);
+void tb_ai_rs232(void);
 
 #endif // _SIM_H

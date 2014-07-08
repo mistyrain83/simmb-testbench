@@ -17,12 +17,12 @@ sint32 _tb_TMS_Init(void)
     
     if (fd == ERROR)
     {
-        DBG_ERRO("[tms] %s open failed!", TMS_UART_NAME);
+        DBG_ERRO("[TMS] %s open failed!", TMS_UART_NAME);
         exit(ERROR);
     }
     else
     {
-        DBG_INFO("[tms] %s open port successfully", TMS_UART_NAME);
+        DBG_INFO("[TMS] %s open port successfully", TMS_UART_NAME);
     }
     
     ioctl(fd, FIOSETOPTIONS, OPT_RAW);         // 设置串口工作模式
@@ -58,16 +58,18 @@ void _tb_TMS_UartTest(sint32 fd)
                 recvNum = i;
                 break;
             }
+            printf("0x%x-", tmsBuff[i]);
         }
+        printf("\n");
 
         /*
         tmsBuff[0] = 0x55;
 		tmsBuff[1] = 0xaa;
 		tmsBuff[2] = 0x00;
 		tmsBuff[3] = 0xff;
-        sendNum = tsendn(fd, (char *)tmsBuff, 4, TMS_UART_SEND_TIMEOUT);
+        sendNum = _tb_tsendn(fd, (char *)tmsBuff, 4, TMS_UART_SEND_TIMEOUT);
             DBG_INFO("[TMS_UART] sendback num = %d", sendNum);
-            */
+           */
 
         if (rst != -1)
         {

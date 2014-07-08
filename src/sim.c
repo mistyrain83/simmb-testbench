@@ -6,6 +6,7 @@
 #include "speed.h"
 #include "doppler.h"
 #include "tms.h"
+#include "ai.h"
 #include "sim.h"
 
 void tb_buildinfo(void)
@@ -90,3 +91,15 @@ void tb_net(void)
     _tb_UDP_Test();
 }
 
+void tb_ai_rs232(void)
+{
+	sint32 fd;
+    fd = _tb_AI_Init();
+    _tb_AI_UartTest(fd);
+    _tb_AI_Close(fd);
+}
+
+void tb_ai_lock(void)
+{
+    _tb_AI_LockTest();
+}

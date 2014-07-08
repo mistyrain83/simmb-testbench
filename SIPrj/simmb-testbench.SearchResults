@@ -1,0 +1,23 @@
+---- tmsBuff Matches (22 in 2 files) ----
+Ai.c:    uint8 tmsBuff[AI_BUFFER_SIZE];
+Ai.c:    bzero((char *)tmsBuff, AI_BUFFER_SIZE);
+Ai.c:            rst = _tb_tread(fd, &tmsBuff[i], 1, AI_UART_RECV_TIMEOUT);
+Ai.c:            //DBG_INFO("i = %d receive = 0x%x", i, tmsBuff[i]);
+Ai.c:            if ((tmsBuff[i] == AI_FRAME_FOOT) || (rst == -1))
+Ai.c:        tmsBuff[0] = 0x55;
+Ai.c:		tmsBuff[1] = 0xaa;
+Ai.c:		tmsBuff[2] = 0x00;
+Ai.c:		tmsBuff[3] = 0xff;
+Ai.c:        sendNum = tsendn(fd, (char *)tmsBuff, 4, AI_UART_SEND_TIMEOUT);
+Ai.c:            sendNum = _tb_tsendn(fd, (char *)tmsBuff, recvNum, AI_UART_SEND_TIMEOUT);
+Tms.c:    uint8 tmsBuff[TMS_BUFFER_SIZE];
+Tms.c:    bzero((char *)tmsBuff, TMS_BUFFER_SIZE);
+Tms.c:            rst = _tb_tread(fd, &tmsBuff[i], 1, TMS_UART_RECV_TIMEOUT);
+Tms.c:            //DBG_INFO("i = %d receive = 0x%x", i, tmsBuff[i]);
+Tms.c:            if ((tmsBuff[i] == TMS_FRAME_FOOT) || (rst == -1))
+Tms.c:        tmsBuff[0] = 0x55;
+Tms.c:		tmsBuff[1] = 0xaa;
+Tms.c:		tmsBuff[2] = 0x00;
+Tms.c:		tmsBuff[3] = 0xff;
+Tms.c:        sendNum = tsendn(fd, (char *)tmsBuff, 4, TMS_UART_SEND_TIMEOUT);
+Tms.c:            sendNum = _tb_tsendn(fd, (char *)tmsBuff, recvNum, TMS_UART_SEND_TIMEOUT);
